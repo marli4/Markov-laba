@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markov-laba", "Markov-laba\Markov-laba.csproj", "{80936C18-E41C-40FE-9406-E75FB025699C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markov-laba", "Markov-laba\Markov-laba.csproj", "{60ADDA10-A03F-4481-A961-FEE687374E57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{80936C18-E41C-40FE-9406-E75FB025699C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80936C18-E41C-40FE-9406-E75FB025699C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80936C18-E41C-40FE-9406-E75FB025699C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80936C18-E41C-40FE-9406-E75FB025699C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60ADDA10-A03F-4481-A961-FEE687374E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60ADDA10-A03F-4481-A961-FEE687374E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60ADDA10-A03F-4481-A961-FEE687374E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60ADDA10-A03F-4481-A961-FEE687374E57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B424250C-872F-48A8-AC62-2F71CE168B53}
+		SolutionGuid = {0768B61B-44DB-491A-8674-80B8BDF9C010}
 	EndGlobalSection
 EndGlobal

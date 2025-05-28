@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Markov_laba.Models.Restaurant>
+
+@{
+    ViewData["Title"] = "Рестораны";
+}
+
+<h1>Рестораны</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-controller="Restaurants" asp-action="Index">
+    <p>
+        <label>Название: <input type="text" name="SearchString" /></label>
+        <input type="submit" value="Поиск" />
+        <br />
+        <label>Кухня:</label>
+        <input type="submit" name="searchCuisine" value="Сброс" />
+        <input type="submit" name="searchCuisine" value="Американская" />
+        <input type="submit" name="searchCuisine" value="Японская" />
+        <input type="submit" name="searchCuisine" value="Итальянская" />
+        <input type="submit" name="searchCuisine" value="Русская" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cuisine)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cuisine)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Markov_laba.Models.Order>
+
+@{
+    ViewData["Title"] = "Заказы";
+}
+
+<h1>Заказы</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-controller="Orders" asp-action="Index">
+    <p>
+        <label>Адрес: <input type="text" name="SearchString" /></label>
+        <input type="submit" value="Filter" />
+    </p>
+    <p>
+        <label>Статус: </label>
+        <input type="checkbox" name="status" />
+        <button type="submit" value="undefined" name="status">Сброс</button>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.clientId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.courierId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.delivered)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.clientId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.courierId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.delivered)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
