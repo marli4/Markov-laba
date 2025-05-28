@@ -66,7 +66,7 @@ namespace Markov_laba.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,login")] Client client)
+        public async Task<IActionResult> Create([Bind("Id,login,password")] Client client)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace Markov_laba.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,login")] Client client)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,login,password")] Client client)
         {
             if (id != client.Id)
             {

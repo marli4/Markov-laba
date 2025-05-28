@@ -1,0 +1,17 @@
+﻿@model Markov_laba.ViewModels.RegViewModel
+
+@{
+	ViewData["Title"] = "Регистрация";
+}
+<div class="text-center">
+	<h1>Регистрация</h1>
+	<form asp-action="Registration">
+		<input placeholder="Логин" type="text" asp-for="l" />
+		<input placeholder="Пароль" type="text" asp-for="p" />
+		<br />
+		<span>Зарегистрироваться как:</span>
+		<button asp-for="u" type="text" value="client">Клиент</button>
+		<button asp-for="u" type="text" value="courier">Курьер</button>
+		<input type="submit" value="Registration" />
+	</form>
+</div>
